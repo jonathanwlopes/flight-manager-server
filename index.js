@@ -1,17 +1,20 @@
 import express from "express";
 
 const app = express();
+
+app.use(express.json());
+
 const port = process.env.PORT || 3333;
 
 class People {
-  constructor(id, name, lastName){
-    this._id = id
+  constructor(id, name, lastName) {
+    this._id = id;
     this.name = name;
-    this.lastName = lastName
+    this.lastName = lastName;
   }
 }
 
-const user1 = new People(1,'Jonathan','Lopes')
+const user1 = new People(1, "Marcos", "Lopes");
 
 const dbApp = {
   userList: [user1],
