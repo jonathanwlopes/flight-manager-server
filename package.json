@@ -1,0 +1,19 @@
+{
+  "name": "flight-manager-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/jonathanwlopes/flight-manager-server.git",
+  "author": "jonathanwlopes <jonathanwlopes93@gmail.com>",
+  "license": "MIT",
+  "scripts":{
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
