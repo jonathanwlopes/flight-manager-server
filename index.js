@@ -2,7 +2,11 @@ import express from "express";
 
 const app = express();
 
-app.use(express.json());
+app.use((req, res, next) => {
+    express.json();
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 const port = process.env.PORT || 3333;
 
