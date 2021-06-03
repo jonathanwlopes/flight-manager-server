@@ -16,14 +16,29 @@ class People {
     this.name = name;
     this.lastName = lastName;
   }
-  getUser() {}
+}
+
+class Expenses {
+  constructor(crew, airNavigation, fuel, maintence) {
+    this.crew = crew;
+    this.airNavigation = airNavigation;
+    this.fuel = fuel;
+    this.maintence = maintence;
+  }
 }
 
 const user1 = new People(1, "Jonathan", "Lopes");
+user1.expense = new Expenses(100, 200, 1, 1);
+
+
 const user2 = new People(2, "Marcos", "Maia");
 
+
+
+console.log(user1);
 const dbApp = {
   userList: [user1, user2],
+  expenseList: [],
 };
 
 app.get("/", (req, res) => {
